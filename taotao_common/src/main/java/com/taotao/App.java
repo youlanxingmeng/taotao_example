@@ -1,4 +1,4 @@
-package com.taotao.mapper;
+package com.taotao;
 
 /**
  * Hello world!

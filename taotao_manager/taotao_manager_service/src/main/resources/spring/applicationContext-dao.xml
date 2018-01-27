@@ -25,7 +25,7 @@
         <!-- 加载mybatis的全局配置文件 -->
         <property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml" />
     </bean>
-    <!--配置扫描器-->
+    <!--配置扫描器 要求：mapperd的映射文件和接口在同一个目录而且名字和接口的名字一致。-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.taotao.mapper" />
     </bean>

@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>taotao_manager_service</artifactId>
     <packaging>war</packaging>
-    <name>taotao_manager_service Maven Webapp</name>
+    <name>taotao_manager_service </name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
@@ -16,17 +16,19 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.taotao</groupId>
-            <artifactId>taotao_manager_dao</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
+        <!--依赖于POJO 依赖于interface-->
         <dependency>
             <groupId>com.taotao</groupId>
             <artifactId>taotao_manager_interface</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!-- spring的依赖 -->
+        <!--依赖于dao-->
+        <dependency>
+            <groupId>com.taotao</groupId>
+            <artifactId>taotao_manager_dao</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -56,11 +58,13 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
         </dependency>
+        <!--添加dubbo的依赖一定要注意排除依赖-->
+
         <!--添加dubbo的依赖-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
-            <!--排除依赖-->
+            <!-- 排除依赖 -->
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework</groupId>
@@ -85,5 +89,4 @@
     <build>
         <finalName>taotao_manager_service</finalName>
     </build>
-
 </project>

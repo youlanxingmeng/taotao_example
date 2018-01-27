@@ -1,27 +1,24 @@
 package com.taotao.common.pojo;
 
+import java.io.Serializable;
 import java.util.List;
 
-/**
- * @author jianghao
- * @version 1.0
- * @description com.taotao.common.pojo
- * @date 2018/1/26
- */
-public class EasyUIDataGridResult {
-    private Long total;
-    private List rows;
+//如果要在不同的系统之前进行传递对象 必须要实现序列化
+public class EasyUIDataGridResult implements Serializable{
+    private Long total;//总记录数
+    private List rows;//对象的集合 可以使商品列表
 
+    //ALT + INSERT
     public Long getTotal() {
         return total;
     }
 
-    public List getRows() {
-        return rows;
-    }
-
     public void setTotal(Long total) {
         this.total = total;
+    }
+
+    public List getRows() {
+        return rows;
     }
 
     public void setRows(List rows) {

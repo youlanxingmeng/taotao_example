@@ -1,4 +1,4 @@
-package com.taotao.mapper;
+package com.taotao;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
