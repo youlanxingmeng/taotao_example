@@ -8,10 +8,9 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>taotao_manager_web</artifactId>
     <packaging>war</packaging>
-    <name>taotao_manager_web Maven Webapp</name>
+    <name>taotao_manager_web</name>
     <url>http://maven.apache.org</url>
     <dependencies>
-
         <dependency>
             <groupId>com.taotao</groupId>
             <artifactId>taotao_manager_interface</artifactId>
@@ -19,9 +18,15 @@
         </dependency>
         <dependency>
             <groupId>com.taotao</groupId>
+            <artifactId>taotao_content_interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taotao</groupId>
             <artifactId>taotao_common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
@@ -95,6 +100,34 @@
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
         </dependency>
+        <!--fastdfs客户端-->
+        <!--<dependency>
+            <groupId>fastdfs_client</groupId>
+            <artifactId>fastdfs_client</artifactId>
+            <version>1.25</version>
+        </dependency>-->
+        <dependency>
+            <groupId>fastdfs_client</groupId>
+            <artifactId>fastdfs_client</artifactId>
+            <version>1.25</version>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>-->
+        <!--添加商品上传文件的依赖-->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>taotao_manager_web</finalName>
@@ -108,7 +141,17 @@
                 </configuration>
             </plugin>
         </plugins>
-
+       <!-- <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                    <include>**/*.conf</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>-->
     </build>
 
 </project>
